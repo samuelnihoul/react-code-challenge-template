@@ -10,7 +10,7 @@ export default function App() {
   )
 
   return (isLoading ? <p>Loading...</p> : error ? <p>Error</p> : <div className='bg-gray-300 columns-1 min-h-screen' >
-    <h1 className='h-16 not-italic font-bold text-5xl text-teal-500 ml-40 mt-20 mb-20'>Population of the States</h1>
+    <h1 className='h-16 not-italic font-bold text-5xl text-teal-500 ml-20 mt-10 mb-10'>Population of the States</h1>
 
     <div className=" grid grid-cols-5">
 

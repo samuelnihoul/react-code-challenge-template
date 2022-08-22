@@ -1,5 +1,3 @@
-//  Query https://datausa.io/api/data?drilldowns=State&measures=Population&year=2019 using React Query
-// it has to be displayed in 5 columns of cards
 import { useQuery } from 'react-query';
 
 export default function App() {
@@ -20,7 +18,7 @@ export default function App() {
         console.log(Year); return <div className='block p-6 rounded-lg shadow-lg bg-white max-w-sm flex  m-6'>
           <div className='columns-1 min-w-full'>
             <div className='font-bold'>{State}</div><hr></hr>
-            <div className='font-bold text-gray-600'>Population: {Math.round(Population / 100000) / 10}M</div><hr className='justify-center'></hr><div className='font-bold text-gray-600'>Year: {Year}</div>
+            <div className='font-bold text-gray-600'>Population: {Math.round(Population / 100000) / 10}M</div><hr></hr><div className='font-bold text-gray-600'>Year: {Year}</div>
           </div></div>
       })}
 

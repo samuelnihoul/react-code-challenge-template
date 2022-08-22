@@ -9,8 +9,8 @@ export default function App() {
     )
   )
 
-  return (isLoading ? <p>Loading...</p> : error ? <p>Error</p> : <div className='bg-gray-300 min-h-screen' >
-    <h1 className='h-16 not-italic font-bold text-5xl text-teal-500 ml-60 mt-40'>Population of the States</h1>
+  return (isLoading ? <p>Loading...</p> : error ? <p>Error</p> : <div className='bg-gray-300 columns-1 min-h-screen' >
+    <h1 className='h-16 not-italic font-bold text-5xl text-teal-500 ml-40 mt-20 mb-20'>Population of the States</h1>
 
     <div className=" grid grid-cols-5">
 
@@ -18,9 +18,9 @@ export default function App() {
 
       {data.data.slice(0, 12).map(({ State, Year, Population }: { State: string, Year: number, Population: number }) => {
         console.log(Year); return <div className='block p-6 rounded-lg shadow-lg bg-white max-w-sm flex  m-6'>
-          <div className='columns-1'>
+          <div className='columns-1 min-w-full'>
             <div className='font-bold'>{State}</div><hr></hr>
-            <div className='font-bold text-gray-600'>Population: {Math.round(Population / 100000) / 10}M</div><hr className='w-48 justify-center'></hr><div className='font-bold text-gray-600'>Year: {Year}</div>
+            <div className='font-bold text-gray-600'>Population: {Math.round(Population / 100000) / 10}M</div><hr className='justify-center'></hr><div className='font-bold text-gray-600'>Year: {Year}</div>
           </div></div>
       })}
 
